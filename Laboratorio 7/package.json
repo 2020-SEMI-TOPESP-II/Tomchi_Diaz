@@ -1,0 +1,30 @@
+{
+  "name": "lab7",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "mongo:start": "docker run --rm -p=27017:27017 --env-file=./.env --name=laboratorio7--mongo -d centos/mongodb-32-centos7",
+    "mongo:stop": "docker stop laboratorio7--mongo",
+    "start": "nodemon index.js",
+    "dev ": "npm run mongo:start && nodemon app.js"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "javascript",
+    "docker"
+  ],
+  "author": "Tomchi Diaz",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.22",
+    "nodemon": "^2.0.4",
+    "pug": "^3.0.0"
+  }
+}

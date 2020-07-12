@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+    body
+        a(href='/ESTUDIANTES/') Atrás
+        h1 #{estudiante.nombre}
+        h2 Tiene #{estudiante.edad} años.
+        h3 Estudiantes
+            h4 ¿Desea realizarle cambios?.
+            form(action="/ESTUDIANTES/:id", method="put")
+            label Nombre:
+            input#create-estudiante-nombre(name="nombre", type="text")
+            br
+            label Edad:
+            input#create-estudiante-edad(name="edad", type="text")
+            br
+            button#create-estudiante-btn(type="submit") Guardar
